@@ -45,7 +45,7 @@ $result = mysqli_query($koneksi, $query);
 
 </table>
 
-<a href="form.html">Tambah Data</a>
+<a href="index.html">Tambah Data</a>
 
 </body>
 </html>
