@@ -1,5 +1,5 @@
 <?php
-$koneksi = mysqli_connect(hostname: "localhost", username: "root", password:"", database :"phpDiscord" );
+$koneksi = mysqli_connect("localhost", "root", "", "phpDiscord");
 
 
 

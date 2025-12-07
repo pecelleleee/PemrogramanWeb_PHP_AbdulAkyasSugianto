@@ -4,38 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulir Mahasiswa</title>
-    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" 
+    rel="stylesheet">
 </head>
+
 <body>
 
-    <h1>FORMULIR DATA MAHASISWA</h1>
+    <div class="header">
+        <h1 class="poppins-bold">FORMULIR DATA MAHASISWA</h1>
+    </div>
+
     <form action="Logic.php" method="post">
+        <div class="box">
 
-    <label>NIM: </label>
-    <input type="number" name="nim">
-    <br>
+            <!-- NIM -->
+            <div class="ref">
+                <label class="main poppins-medium">NIM:</label>
+                <input type="number" name="nim" required>
+            </div>
 
-    <label>NAMA: </label>
-    <input type="text" name="name">
-    <br>
+            <!-- NAMA -->
+            <div class="ref">
+                <label class="main poppins-medium">NAMA:</label>
+                <input type="text" name="name" required>
+            </div>
 
-    <label>PRODI: </label>
-    <input type="text" name="prodi">
-    <br>
+            <!-- PRODI -->
+            <div class="ref">
+                <label class="main poppins-medium">PRODI:</label>
+                <input type="text" name="prodi" required>
+            </div>
 
-    <label>Laki-laki</label>
-    <input type="radio" name="JenisKelamin" value ="laki-laki">
-    <br>
+            <!-- JENIS KELAMIN -->
+            <div class="ref">
+                <label class="main poppins-medium">JENIS KELAMIN:</label>
+                <div class="radio-group">
+                    <label class="poppins-regular">
+                        <input type="radio" name="JenisKelamin" value="laki-laki" required>
+                        Laki-laki
+                    </label><br>
 
-    <label >Perempuan</label>
-    <input type="radio" name="JenisKelamin" value ="perempuan">
-    <br>
+                    <label class="poppins-regular">
+                        <input type="radio" name="JenisKelamin" value="perempuan" required>
+                        Perempuan
+                    </label>
+                </div>
+            </div>
 
-    <label>ALAMAT: </label><br>
-    <textarea name="alamat"></textarea>
-    <br>
+            <!-- ALAMAT -->
+            <div class="ref">
+                <label class="main poppins-medium">ALAMAT:</label>
+                <textarea name="alamat" required></textarea>
+            </div>
 
-    <button type="submit" name="submit">SUBMIT</button>
+        </div>
+
+        <button type="submit" name="submit" class="submit-container poppins-bold">SUBMIT</button>
     </form>
+
 </body>
 </html>
